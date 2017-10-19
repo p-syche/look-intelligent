@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
+// import base from '../base';
 import Menu from './Menu';
-import Content from './Content';
+import Main from './Main';
 
 import '../css/App.css';
 
@@ -10,7 +12,7 @@ class App extends Component {
       <div className="App">
         <h2 className="title">Look Intelligent</h2>
         <Menu />
-        <Content />
+        <Main />
       </div>
     );
   }
