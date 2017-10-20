@@ -16,7 +16,7 @@ const Details = (props) => {
     <div>
       <h1>{detail.name} (#{detail.number})</h1>
       <h2>Position: {detail.position}</h2>
-      <Link to='/content'>Back</Link>
+      <Link to='/'>Back</Link>
     </div>
   )
 }
