@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-// import base from '../base';
+import base from '../base';
 import Header from './Header';
 import Content from './Content';
 
@@ -23,7 +24,8 @@ class App extends Component {
 			chosen: {
 				source: '1',
 				appearance: 'no'
-			}
+			},
+			loading: false
 		}
 
 		this.applyChoice = this.applyChoice.bind(this);
@@ -46,10 +48,32 @@ class App extends Component {
 	}
 
 	applyChoice(theChoice) {
-		console.log('the choice was made!', theChoice);
+
 		this.setState({
-			chosen: theChoice
+			chosen: theChoice,
+			loading: true
 		});
+
+		const url = base.apiURLstart + theChoice.chosenSource + base.apiURLend;
+
+		axios.get(url)
+	    	.then(res => {
+		        // const posts = res.data.map(obj => obj.data);
+		        this.setState({ 
+		        	loading: false,
+		        	articles: res.data.articles
+		        });
+		      	console.log('in axios', res.data.source)
+
+			}).catch(error => {
+				console.log(error);
+			});
+
+
+	}
+
+	loading() {
+		console.log('looooading!')
 	}
 
 	render() {
@@ -62,6 +86,7 @@ class App extends Component {
 				/>
 				<Content 
 					chosen={this.state.chosen}
+					loading={this.state.loading}
 				/>
 			</div>
 		);

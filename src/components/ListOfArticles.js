@@ -1,13 +1,16 @@
 import React from 'react'
+import '../css/Content.css'
 
-// The ListOfArticles iterates over all of the players and creates
-// a link to their profile page.
 class ListOfArticles extends React.Component {
   render() {
-  const stuff = this.props.chosen;
-    
+    const stuff = this.props.chosen;
+    const loadingSource = this.props.loading;
+
     return (
-      <div>
+      <div className="content">
+      <div className={loadingSource ? 'loading-now' : 'not-loading'} >
+        LOADING!
+      </div>
         <ul>
           {
             Object

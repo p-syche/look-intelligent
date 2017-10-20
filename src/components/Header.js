@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/Menu.css';
+import '../css/Header.css';
 
 class Header extends Component {
 
@@ -23,7 +23,7 @@ class Header extends Component {
 			<header>
 			    <form ref={(input) => this.makeChoice = input} className="choices" onSubmit={(e) => this.choiceMade(e)}>
 					<select ref={(input) => this.chooseSource = input} className="sources" defaultValue={this.props.myState.chosen.chosenSource}>
-						<option value="initial" key="initial" index="default">Please choose</option> 
+						<option value="buzzfeed" key="initial" index="default">Please choose</option> 
 						{
 						Object
 							.keys(mySources)

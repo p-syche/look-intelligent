@@ -11,7 +11,10 @@ class Content extends React.Component {
 
 		return (
 			<Switch>
-			    <Route exact path='/' render={()=><ListOfArticles chosen={this.props.chosen}/>}/>
+			    <Route exact path='/' render={()=><ListOfArticles 
+			    	chosen={this.props.chosen}
+			    	loading={this.props.loading}
+			    />} />
 			    <Route path='/:number' component={Details}/>
 			</Switch>
 			
