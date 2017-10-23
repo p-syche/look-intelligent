@@ -1,22 +1,41 @@
+@import 'reset';
 @import 'simple-grid-min';
-@import 'header';
 
-.App {
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand');
 
 .not-loading {
 	display: none;
 }
 
-.App.Pretty {
-	background: #fff;
-	@import 'single-article-pretty';
-}
-
-.App.Stack {
-	background: grey;
-	@import 'single-article-stack';
+//basic styles
+.App {
+	.single-article img {
+		width: 25%;
+		height: auto;
+	}
+	//initial app state on welcome
+	&.initial {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		font-family: 'Quicksand', sans-serif;
+		h2 {
+			padding: 15% 0 5% 0;
+			font-weight: bold;
+			letter-spacing: 2px;
+		}
+		@import 'header';
+	}
+	//pretty read
+	&.Pretty {
+		background: #fff;
+		@import 'header-pretty';
+		@import 'single-article-pretty';
+	}
+	//looking like Stack Overflow
+	&.Stack {
+		background: grey;
+		@import 'header-stack';
+		@import 'single-article-stack';
+	}
 }

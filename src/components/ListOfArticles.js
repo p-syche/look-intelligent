@@ -10,7 +10,7 @@ class ListOfArticles extends React.Component {
     if(chosenStuff.source === 'home') {
       return (
         <div className="home-page">
-          <h2>Welcome! choose something!</h2>
+          <h4>Welcome! Choose something!</h4>
         </div>
       )
       

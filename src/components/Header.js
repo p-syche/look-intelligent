@@ -16,12 +16,11 @@ class Header extends Component {
 	render() {
 		const mySources = this.props.myState.source;
 		const myAppearances = this.props.myState.appearance;
-
+		
 	    return (
 			<div className="header-choice">
 				<span>Reading </span>
 				<select ref={(input) => this.chooseSource = input} className="sources" defaultValue={this.props.myState.chosen.source} onChange={(e) => this.choiceMade(e)}>
-					<option disabled value="home" key="initial" index="default">Please choose</option> 
 					{
 					Object
 						.keys(mySources)
@@ -44,7 +43,6 @@ class Header extends Component {
 							</option> 
 						)
 					}
-					
 				</select>
 			</div>
 	    );
