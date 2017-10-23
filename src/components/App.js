@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import base from '../base';
 import Header from './Header';
-import Content from './Content';
+import ListOfArticles from './ListOfArticles';
 
 import '../css/App.css';
 
@@ -66,7 +66,7 @@ class App extends Component {
 		        	loading: false,
 		        	articles: res.data.articles
 		        });
-		      	console.log('in axios', res.data)
+		      	// console.log('in axios', res.data)
 
 			}).catch(error => {
 				console.log(error);
@@ -87,7 +87,7 @@ class App extends Component {
 					myState={this.state}
 					applyChoice={this.applyChoice}
 				/>
-				<Content 
+				<ListOfArticles 
 					chosen={this.state.chosen}
 					loading={this.state.loading}
 					articles={this.state.articles}
