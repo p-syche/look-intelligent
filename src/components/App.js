@@ -5,7 +5,7 @@ import base from '../base';
 import Header from './Header';
 import ListOfArticles from './ListOfArticles';
 
-import '../css/App.css';
+import '../scss/App.css';
 
 class App extends Component {
 	constructor() {
@@ -18,12 +18,12 @@ class App extends Component {
 				reddit: 'reddit-r-all'
 			},
 			appearance: {
-				pretty: 'pretty', 
-				stack: 'stack-overflow'
+				pretty: 'Pretty Smart', 
+				stack: 'Stack Overflow'
 			},
 			chosen: {
-				source: '1',
-				appearance: 'no'
+				source: 'home',
+				appearance: 'initial'
 			},
 			loading: false,
 			articles: {}
@@ -54,7 +54,8 @@ class App extends Component {
 
 		this.setState({
 			chosen: theChoice,
-			loading: true
+			loading: true,
+			articles: {}
 		});
 
 		const url = base.apiURLstart + theChoice.chosenSource + base.apiURLend;
@@ -66,7 +67,6 @@ class App extends Component {
 		        	loading: false,
 		        	articles: res.data.articles
 		        });
-		      	// console.log('in axios', res.data)
 
 			}).catch(error => {
 				console.log(error);
@@ -75,13 +75,9 @@ class App extends Component {
 
 	}
 
-	loading() {
-		console.log('looooading!')
-	}
-
 	render() {
 		return (
-			<div className="App">
+			<div className={"App " + this.state.chosen.chosenAppearance} >
 				<h2 className="title">Look Intelligent</h2>
 				<Header 
 					myState={this.state}
