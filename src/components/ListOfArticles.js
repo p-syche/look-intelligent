@@ -1,7 +1,5 @@
 import React from 'react'
 import Article from './Article'
-import '../scss/Content.css'
-import '../css/simple-grid.min.css'
 
 class ListOfArticles extends React.Component {
   render() {

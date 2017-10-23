@@ -33,11 +33,9 @@ class App extends Component {
 	}
 
 	componentWillMount() {
-		//check localstorage
 		const localStorageRef = localStorage.getItem(`chosenStuff`);
 
 		if(localStorageRef) {
-			//update App component's order state
 			this.setState({
 				chosen: JSON.parse(localStorageRef),
 				articles: JSON.parse(localStorage.getItem(`chosenArticles`))
@@ -58,11 +56,10 @@ class App extends Component {
 			articles: {}
 		});
 
-		const url = base.apiURLstart + theChoice.chosenSource + base.apiURLend;
+		const url = base.apiURLstart + theChoice.source + base.apiURLend;
 
 		axios.get(url)
 	    	.then(res => {
-		        // const posts = res.data.map(obj => obj.data);
 		        this.setState({ 
 		        	loading: false,
 		        	articles: res.data.articles
@@ -70,14 +67,14 @@ class App extends Component {
 
 			}).catch(error => {
 				console.log(error);
-			});
+		});
 
 
 	}
 
 	render() {
 		return (
-			<div className={"App " + this.state.chosen.chosenAppearance} >
+			<div className={"App " + this.state.chosen.appearance} >
 				<h2 className="title">Look Intelligent</h2>
 				<Header 
 					myState={this.state}

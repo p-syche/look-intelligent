@@ -162,6 +162,9 @@ p {
   margin: 0 auto;
   text-align: center; }
 
+.not-loading {
+  display: none; }
+
 .App.Pretty {
   background: #fff; }
   .App.Pretty .single-article {
