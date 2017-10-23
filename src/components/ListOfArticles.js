@@ -1,10 +1,12 @@
 import React from 'react'
+import Article from './Article'
 import '../css/Content.css'
 
 class ListOfArticles extends React.Component {
   render() {
     const stuff = this.props.chosen;
     const loadingSource = this.props.loading;
+    const articles = this.props.articles;
 
     return (
       <div className="content">
@@ -21,7 +23,16 @@ class ListOfArticles extends React.Component {
                 </li> 
               )
           }
-        </ul> 
+        </ul>
+        <ul>
+          {
+            Object
+              .keys(articles)
+              .map(key =>
+                <Article key={key} article={this.props.articles[key]}/>
+              )
+          }
+        </ul>
       </div>
     )
   }

@@ -12,7 +12,6 @@ class Header extends Component {
 		}
 
 		this.props.applyChoice(theChoice);
-		// this.makeChoice.reset();
 	}
 
 	render() {
@@ -28,8 +27,8 @@ class Header extends Component {
 						Object
 							.keys(mySources)
 							.map((key) =>
-								<option value={key} key={key} index={key}>
-									{mySources[key]}
+								<option value={mySources[key]} key={key} index={key}>
+									{key}
 								</option> 
 							)
 						}

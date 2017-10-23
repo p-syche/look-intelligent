@@ -25,7 +25,8 @@ class App extends Component {
 				source: '1',
 				appearance: 'no'
 			},
-			loading: false
+			loading: false,
+			articles: {}
 		}
 
 		this.applyChoice = this.applyChoice.bind(this);
@@ -38,13 +39,15 @@ class App extends Component {
 		if(localStorageRef) {
 			//update App component's order state
 			this.setState({
-				chosen: JSON.parse(localStorageRef)
+				chosen: JSON.parse(localStorageRef),
+				articles: JSON.parse(localStorage.getItem(`chosenArticles`))
 			});
 		}
 	}
 
 	componentWillUpdate(nextProps, nextState) {
 		localStorage.setItem(`chosenStuff`, JSON.stringify(nextState.chosen));
+		localStorage.setItem(`chosenArticles`, JSON.stringify(nextState.articles));
 	}
 
 	applyChoice(theChoice) {
@@ -63,7 +66,7 @@ class App extends Component {
 		        	loading: false,
 		        	articles: res.data.articles
 		        });
-		      	console.log('in axios', res.data.source)
+		      	console.log('in axios', res.data)
 
 			}).catch(error => {
 				console.log(error);
@@ -87,6 +90,7 @@ class App extends Component {
 				<Content 
 					chosen={this.state.chosen}
 					loading={this.state.loading}
+					articles={this.state.articles}
 				/>
 			</div>
 		);
