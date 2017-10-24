@@ -202,28 +202,34 @@ p {
   width: 25%;
   height: auto; }
 
+.App select {
+  padding: 0.5em 3em 0.5em 0.5em;
+  border-color: black;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  font-weight: bold;
+  font-size: 14px; }
+
 .App.initial {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Quicksand', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
   .App.initial h2 {
+    font-family: 'Quicksand', sans-serif;
     padding: 15% 0 5% 0;
     font-weight: bold;
     letter-spacing: 2px; }
   .App.initial .header-choice {
-    font-family: 'Open Sans', sans-serif;
     padding: 0 0 5% 0; }
-    .App.initial .header-choice select {
-      padding: 0.5em 3em 0.5em 0.5em;
-      border-color: black;
-      border-style: solid;
-      border-width: 0px 0px 2px 0px;
-      font-weight: bold;
-      font-size: 14px; }
 
 .App.pretty {
   background: #fff; }
+  .App.pretty h2 {
+    font-family: 'Times New Roman', serif;
+    color: #7b7b7b;
+    font-weight: bold;
+    float: left; }
   .App.pretty .single-article {
     background: lightblue;
     float: left; }

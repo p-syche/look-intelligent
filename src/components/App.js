@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { Switch, Route } from 'react-router-dom'
 
+import axios from 'axios';
 import base from '../base';
-import Header from './Header';
-import ListOfArticles from './ListOfArticles';
+import AppHome from './AppHome';
+import AppChosen from './AppChosen';
 
 import '../scss/App.css';
+
 
 class App extends Component {
 	constructor() {
@@ -74,18 +76,9 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className={"App " + this.state.chosen.appearance} >
-				<h2 className="title">Look Intelligent</h2>
-				<Header 
-					myState={this.state}
-					applyChoice={this.applyChoice}
-				/>
-				<ListOfArticles 
-					chosen={this.state.chosen}
-					loading={this.state.loading}
-					articles={this.state.articles}
-				/>
-			</div>
+			<Switch>
+				<Route exact path="/looking-smart" component={AppChosen}/>
+			</Switch>
 		);
 	}
 }

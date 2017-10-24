@@ -14,18 +14,29 @@
 		width: 25%;
 		height: auto;
 	}
+	select {
+	    padding: 0.5em 3em 0.5em 0.5em;
+		border-color: black;
+		border-style: solid;
+		border-width: 0px 0px 2px 0px;
+		font-weight: bold;
+		font-size: 14px;
+	}
 	//initial app state on welcome
 	&.initial {
 		width: 100%;
 		margin: 0 auto;
 		text-align: center;
-		font-family: 'Quicksand', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		h2 {
+			font-family: 'Quicksand', sans-serif;
 			padding: 15% 0 5% 0;
 			font-weight: bold;
 			letter-spacing: 2px;
 		}
-		@import 'header';
+		.header-choice {
+			padding: 0 0 5% 0;
+		}
 	}
 	//pretty read
 	&.pretty {
