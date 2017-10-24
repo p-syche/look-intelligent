@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 import axios from 'axios';
 import base from '../base';
-import AppHome from './AppHome';
-import AppChosen from './AppChosen';
+import Home from './AppHome';
+import Main from './Main';
 
 import '../scss/App.css';
 
@@ -71,13 +71,27 @@ class App extends Component {
 				console.log(error);
 		});
 
-
+		this.setState({redirect: true});
 	}
 
 	render() {
+		if (this.state.redirect) {
+			return <Redirect to={'/looking-smart/' + this.state.chosen.source + '/' + this.state.chosen.appearance} />;
+		}
+
 		return (
 			<Switch>
-				<Route exact path="/looking-smart" component={AppChosen}/>
+				<Route exact path='/' render={()=><Home 
+			    	myState={this.state}
+					applyChoice={this.applyChoice}
+			    />} />
+				<Route path='/looking-smart/' render={()=><Main 
+			    	myState={this.state}
+					applyChoice={this.applyChoice}
+					chosen={this.state.chosen}
+					loading={this.loading}
+					articles={this.state.articles}
+			    />} />
 			</Switch>
 		);
 	}
