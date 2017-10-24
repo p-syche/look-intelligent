@@ -21,6 +21,7 @@ class Header extends Component {
 			<div className="header-choice">
 				<span>Reading </span>
 				<select ref={(input) => this.chooseSource = input} className="sources" defaultValue={this.props.myState.chosen.source} onChange={(e) => this.choiceMade(e)}>
+					<option value="home" key="home" disabled>Please choose</option>
 					{
 					Object
 						.keys(mySources)
@@ -38,7 +39,7 @@ class Header extends Component {
 					Object
 						.keys(myAppearances)
 						.map((key) =>
-							<option value={myAppearances[key]} key={key} index={key}>
+							<option value={key} key={key} index={key}>
 								{myAppearances[key]}
 							</option> 
 						)
