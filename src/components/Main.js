@@ -8,7 +8,7 @@ class Main extends Component {
 			<div className={"Main " + this.props.chosen.appearance} >
 				<Header 
 					myState={this.props.myState}
-					applyChoice={this.applyChoice}
+					applyChoice={this.props.applyChoice}
 				/>
 				<ListOfArticles 
 					chosen={this.props.chosen}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 
@@ -14,7 +15,14 @@ class Header extends Component {
 	}
 
 	cleanLocalStorage() {
+		console.log('why?')
 		localStorage.clear();
+		this.setState({
+			chosen: {
+				source: 'home',
+				appearance: 'initial'
+			}
+		});
 	}
 
 	render() {
@@ -24,9 +32,7 @@ class Header extends Component {
 	    return (
 			<div className="header-choice">
 				<h2 className="title">
-					<button className="back-home" onClick={this.cleanLocalStorage}>
-						Look Intelligent
-					</button>
+					<Link to="/" onClick={this.cleanLocalStorage}>Look Intelligent</Link>
 				</h2>
 				<span>Reading </span>
 				<select ref={(input) => this.chooseSource = input} className="sources" defaultValue={this.props.myState.chosen.source} onChange={(e) => this.choiceMade(e)}>

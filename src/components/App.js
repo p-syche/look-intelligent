@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import axios from 'axios';
 import base from '../base';
-import Header from './Header';
-import ListOfArticles from './ListOfArticles';
+import Home from './Home';
+import Main from './Main';
 
 import '../scss/App.css';
 
@@ -76,15 +77,19 @@ class App extends Component {
 
 		return (
 			<div className={"App " + this.state.chosen.appearance} >
-				<Header 
-					myState={this.state}
-					applyChoice={this.applyChoice}
-				/>
-				<ListOfArticles 
-					chosen={this.state.chosen}
-					loading={this.loading}
-					articles={this.state.articles}
-				/>
+				<Switch>
+				    <Route exact path='/' render={()=><Home 
+				    	myState={this.state}
+						applyChoice={this.applyChoice}
+				    />} />
+				    <Route path='/really-smart' render={()=><Main 
+				    	myState={this.state}
+						applyChoice={this.applyChoice}
+						chosen={this.state.chosen}
+						loading={this.loading}
+						articles={this.state.articles}
+				    />} />
+				</Switch>
 			</div>
 		);
 	}
