@@ -13,13 +13,21 @@ class Header extends Component {
 		this.props.applyChoice(theChoice);
 	}
 
+	cleanLocalStorage() {
+		localStorage.clear();
+	}
+
 	render() {
 		const mySources = this.props.myState.source;
 		const myAppearances = this.props.myState.appearance;
 		
 	    return (
 			<div className="header-choice">
-				<h2 className="title">Look Intelligent</h2>
+				<h2 className="title">
+					<button className="back-home" onClick={this.cleanLocalStorage}>
+						Look Intelligent
+					</button>
+				</h2>
 				<span>Reading </span>
 				<select ref={(input) => this.chooseSource = input} className="sources" defaultValue={this.props.myState.chosen.source} onChange={(e) => this.choiceMade(e)}>
 					<option value="home" key="home" disabled>Please choose</option>
