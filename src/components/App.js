@@ -36,7 +36,6 @@ class App extends Component {
 			this.setState({
 				chosenSource: JSON.parse(lStorageRef),
 				chosenAppearance: JSON.parse(lStorageAppearance),
-				// articles: JSON.parse(localStorage.getItem(`chosenArticles`))
 			});
 		}
 
@@ -45,7 +44,6 @@ class App extends Component {
 	componentWillUpdate(nextProps, nextState) {
 		localStorage.setItem(`sourceChosen`, JSON.stringify(nextState.chosenSource));
 		localStorage.setItem(`appearanceChosen`, JSON.stringify(nextState.chosenAppearance));
-		// localStorage.setItem(`chosenArticles`, JSON.stringify(nextState.articles));
 	}
 
 

@@ -2748,3 +2748,13 @@ p {
       float: left; }
   .App .Main.Stack {
     background: grey; }
+    .App .Main.Stack .header-choice {
+      background: #fafafb;
+      border-top: 3px solid #F48024; }
+      .App .Main.Stack .header-choice .title {
+        padding: 0; }
+      .App .Main.Stack .header-choice .logo {
+        background-image: url("https://cdn.sstatic.net/Sites/stackoverflow/img/sprites.svg");
+        width: 35px;
+        height: 45px;
+        display: inline-block; }
