@@ -57,7 +57,10 @@ class Home extends Component {
 					mySources={myAppearances}
 					homeChoice={this.homeChoice}
 				/>
-				<Link to="/really-smart" onClick={(e) => this.linkClicked(e)}>Get smart</Link>
+				<div className="get-smart-link">
+					<Link to="/really-smart" onClick={(e) => this.linkClicked(e)}>Get smart</Link>
+				</div>
+				
 
 				<div className="error-handler">
 					<span className={this.state.error ? 'error-visible' : 'error-hidden' }>Please choose a source and appearance</span>

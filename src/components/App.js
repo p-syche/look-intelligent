@@ -76,6 +76,7 @@ class App extends Component {
 							loading={this.loading}
 							articles={this.state.articles}
 					    />} />
+					   
 					    <Route render={()=><Home 
 					    	myState={this.state}
 							applyChoice={this.applyChoice}

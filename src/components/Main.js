@@ -55,6 +55,7 @@ class Main extends Component {
 				/>
 				<ListOfArticles 
 					chosenSource={this.props.myState.chosenSource}
+					chosenAppearance={this.props.myState.chosenAppearance}
 					loading={this.state.loading}
 					articles={this.state.articles}
 				/>

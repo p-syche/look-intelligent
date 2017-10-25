@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand');
 
 @import 'reset';
-@import 'simple-grid-min';
-
 @import 'font-awesome/scss/_font-awesome';
 
 .not-loading {
@@ -21,6 +19,7 @@
 		padding: 15% 0 5% 0;
 		font-weight: bold;
 		letter-spacing: 2px;
+		font-size: 34px;
 	}
 	ul {
 		display: inline-block;
@@ -43,6 +42,17 @@
 	}
 
 	.home-page {
+		.get-smart-link {
+			display: block;
+		    margin-top: 50px;
+		    font-weight: bold;
+			a {
+				text-decoration: none;
+				padding: 5px 10px;
+				border: 2px solid #000;
+				color: #000;
+			}
+		}
 		.error-handler {
 			padding-top: 20px;
 		}

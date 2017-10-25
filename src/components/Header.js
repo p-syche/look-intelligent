@@ -24,10 +24,8 @@ class Header extends Component {
 	cleanLocalStorage() {
 		localStorage.clear();
 		this.setState({
-			chosen: {
-				source: 'home',
-				appearance: 'initial'
-			}
+			chosenSource: 'something fun',
+			chosenAppearance: 'something smart'
 		});
 	}
 
@@ -37,6 +35,9 @@ class Header extends Component {
 		if(item.type === 'chosenSource') {
 			this.props.loadArticles(item.item);
 		}
+
+		//ELSE: write URL change here! or component change? need dummy stuff :)
+		
 	}
 
 	render() {

@@ -38,164 +38,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  top: 0;
-  font-size: 100%; }
-
-.center, .container {
-  margin-left: auto;
-  margin-right: auto; }
-
-* {
-  font-family: Lato,Helvetica,sans-serif;
-  color: #333447;
-  line-height: 1.5; }
-
-h1 {
-  font-size: 2.5rem; }
-
-h2 {
-  font-size: 2rem; }
-
-h3 {
-  font-size: 1.375rem; }
-
-h4 {
-  font-size: 1.125rem; }
-
-h5 {
-  font-size: 1rem; }
-
-h6 {
-  font-size: .875rem; }
-
-p {
-  font-size: 1.125rem;
-  font-weight: 200;
-  line-height: 1.8; }
-
-.font-light {
-  font-weight: 300; }
-
-.font-regular {
-  font-weight: 400; }
-
-.font-heavy {
-  font-weight: 700; }
-
-.left {
-  text-align: left; }
-
-.right {
-  text-align: right; }
-
-.center {
-  text-align: center; }
-
-.justify {
-  text-align: justify; }
-
-.container {
-  width: 90%; }
-
-.row {
-  position: relative;
-  width: 100%; }
-
-.row [class^=col] {
-  float: left;
-  margin: .5rem 2%;
-  min-height: .125rem; }
-
-.col-1, .col-10, .col-11, .col-12, .App .Main.Stack .single-article, .col-2, .col-3, .col-4, .col-5, .col-6, .App .Main.Pretty .single-article, .col-7, .col-8, .col-9 {
-  width: 96%; }
-
-.col-1-sm {
-  width: 4.33%; }
-
-.col-2-sm {
-  width: 12.66%; }
-
-.col-3-sm {
-  width: 21%; }
-
-.col-4-sm {
-  width: 29.33%; }
-
-.col-5-sm {
-  width: 37.66%; }
-
-.col-6-sm {
-  width: 46%; }
-
-.col-7-sm {
-  width: 54.33%; }
-
-.col-8-sm {
-  width: 62.66%; }
-
-.col-9-sm {
-  width: 71%; }
-
-.col-10-sm {
-  width: 79.33%; }
-
-.col-11-sm {
-  width: 87.66%; }
-
-.col-12-sm {
-  width: 96%; }
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.hidden-sm {
-  display: none; }
-
-@media only screen and (min-width: 33.75em) {
-  .container {
-    width: 80%; } }
-
-@media only screen and (min-width: 45em) {
-  .col-1 {
-    width: 4.33%; }
-  .col-2 {
-    width: 12.66%; }
-  .col-3 {
-    width: 21%; }
-  .col-4 {
-    width: 29.33%; }
-  .col-5 {
-    width: 37.66%; }
-  .col-6, .App .Main.Pretty .single-article {
-    width: 46%; }
-  .col-7 {
-    width: 54.33%; }
-  .col-8 {
-    width: 62.66%; }
-  .col-9 {
-    width: 71%; }
-  .col-10 {
-    width: 79.33%; }
-  .col-11 {
-    width: 87.66%; }
-  .col-12, .App .Main.Stack .single-article {
-    width: 96%; }
-  .hidden-sm {
-    display: block; } }
-
-@media only screen and (min-width: 60em) {
-  .container {
-    width: 75%;
-    max-width: 60rem; } }
-
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2542,7 +2384,8 @@ p {
     font-family: 'Quicksand', sans-serif;
     padding: 15% 0 5% 0;
     font-weight: bold;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    font-size: 34px; }
   .App ul {
     display: inline-block; }
   .App .header-choice {
@@ -2727,6 +2570,15 @@ p {
     border-width: 0px 0px 2px 0px;
     font-weight: bold;
     font-size: 14px; }
+  .App .home-page .get-smart-link {
+    display: block;
+    margin-top: 50px;
+    font-weight: bold; }
+    .App .home-page .get-smart-link a {
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 2px solid #000;
+      color: #000; }
   .App .home-page .error-handler {
     padding-top: 20px; }
   .App .home-page .error-hidden {
@@ -2741,6 +2593,126 @@ p {
     color: #7b7b7b;
     font-weight: bold;
     float: left; }
+  .App .Main.Pretty body, .App .Main.Pretty html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    font-size: 100%; }
+  .App .Main.Pretty .center, .App .Main.Pretty .container {
+    margin-left: auto;
+    margin-right: auto; }
+  .App .Main.Pretty * {
+    font-family: Lato,Helvetica,sans-serif;
+    color: #333447;
+    line-height: 1.5; }
+  .App .Main.Pretty h1 {
+    font-size: 2.5rem; }
+  .App .Main.Pretty h2 {
+    font-size: 2rem; }
+  .App .Main.Pretty h3 {
+    font-size: 1.375rem; }
+  .App .Main.Pretty h4 {
+    font-size: 1.125rem; }
+  .App .Main.Pretty h5 {
+    font-size: 1rem; }
+  .App .Main.Pretty h6 {
+    font-size: .875rem; }
+  .App .Main.Pretty p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    line-height: 1.8; }
+  .App .Main.Pretty .font-light {
+    font-weight: 300; }
+  .App .Main.Pretty .font-regular {
+    font-weight: 400; }
+  .App .Main.Pretty .font-heavy {
+    font-weight: 700; }
+  .App .Main.Pretty .left {
+    text-align: left; }
+  .App .Main.Pretty .right {
+    text-align: right; }
+  .App .Main.Pretty .center {
+    text-align: center; }
+  .App .Main.Pretty .justify {
+    text-align: justify; }
+  .App .Main.Pretty .container {
+    width: 90%; }
+  .App .Main.Pretty .row {
+    position: relative;
+    width: 100%; }
+  .App .Main.Pretty .row [class^=col] {
+    float: left;
+    margin: .5rem 2%;
+    min-height: .125rem; }
+  .App .Main.Pretty .col-1, .App .Main.Pretty .col-10, .App .Main.Pretty .col-11, .App .Main.Pretty .col-12, .App .Main.Pretty .col-2, .App .Main.Pretty .col-3, .App .Main.Pretty .col-4, .App .Main.Pretty .col-5, .App .Main.Pretty .col-6, .App .Main.Pretty .single-article, .App .Main.Pretty .col-7, .App .Main.Pretty .col-8, .App .Main.Pretty .col-9 {
+    width: 96%; }
+  .App .Main.Pretty .col-1-sm {
+    width: 4.33%; }
+  .App .Main.Pretty .col-2-sm {
+    width: 12.66%; }
+  .App .Main.Pretty .col-3-sm {
+    width: 21%; }
+  .App .Main.Pretty .col-4-sm {
+    width: 29.33%; }
+  .App .Main.Pretty .col-5-sm {
+    width: 37.66%; }
+  .App .Main.Pretty .col-6-sm {
+    width: 46%; }
+  .App .Main.Pretty .col-7-sm {
+    width: 54.33%; }
+  .App .Main.Pretty .col-8-sm {
+    width: 62.66%; }
+  .App .Main.Pretty .col-9-sm {
+    width: 71%; }
+  .App .Main.Pretty .col-10-sm {
+    width: 79.33%; }
+  .App .Main.Pretty .col-11-sm {
+    width: 87.66%; }
+  .App .Main.Pretty .col-12-sm {
+    width: 96%; }
+  .App .Main.Pretty .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .App .Main.Pretty .hidden-sm {
+    display: none; }
+  @media only screen and (min-width: 33.75em) {
+    .App .Main.Pretty .container {
+      width: 80%; } }
+  @media only screen and (min-width: 45em) {
+    .App .Main.Pretty .col-1 {
+      width: 4.33%; }
+    .App .Main.Pretty .col-2 {
+      width: 12.66%; }
+    .App .Main.Pretty .col-3 {
+      width: 21%; }
+    .App .Main.Pretty .col-4 {
+      width: 29.33%; }
+    .App .Main.Pretty .col-5 {
+      width: 37.66%; }
+    .App .Main.Pretty .col-6, .App .Main.Pretty .single-article {
+      width: 46%; }
+    .App .Main.Pretty .col-7 {
+      width: 54.33%; }
+    .App .Main.Pretty .col-8 {
+      width: 62.66%; }
+    .App .Main.Pretty .col-9 {
+      width: 71%; }
+    .App .Main.Pretty .col-10 {
+      width: 79.33%; }
+    .App .Main.Pretty .col-11 {
+      width: 87.66%; }
+    .App .Main.Pretty .col-12 {
+      width: 96%; }
+    .App .Main.Pretty .hidden-sm {
+      display: block; } }
+  @media only screen and (min-width: 60em) {
+    .App .Main.Pretty .container {
+      width: 75%;
+      max-width: 60rem; } }
   .App .Main.Pretty .single-article {
     background: lightblue;
     float: left; }
@@ -2752,7 +2724,10 @@ p {
       height: 57px;
       font-family: 'Arial', sans-serif;
       font-size: 14px;
-      border-top: 3px solid #F48024; }
+      border-top: 3px solid #F48024;
+      box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+      position: fixed;
+      width: 100%; }
       .App .Main.Stack .header-choice .title {
         padding: 0;
         float: left;
@@ -2766,7 +2741,8 @@ p {
         border-bottom: 2px solid #F48024;
         padding: 14px 4px; }
         .App .Main.Stack .header-choice .title a {
-          text-decoration: none; }
+          text-decoration: none;
+          color: #000; }
       .App .Main.Stack .header-choice .logo {
         background-image: url("https://p-syche.github.io/look-intelligent/static/SOsprites.svg");
         width: 35px;
@@ -2809,3 +2785,113 @@ p {
               padding: 10px 7px; }
               .App .Main.Stack .header-choice .choosing .cs-options ul li span::before {
                 height: 1px; }
+    .App .Main.Stack .content {
+      padding: 90px 15px 0 15px;
+      font-family: 'Arial', sans-serif; }
+      .App .Main.Stack .content .row {
+        margin-top: 60px; }
+    .App .Main.Stack .dummy-stack {
+      position: absolute;
+      width: 97%;
+      font-family: 'Arial', sans-serif;
+      z-index: -5; }
+      .App .Main.Stack .dummy-stack .dummy-menu {
+        width: 65%;
+        float: left;
+        height: 40px;
+        border-bottom: 1px solid #e4e6e8; }
+        .App .Main.Stack .dummy-stack .dummy-menu span {
+          font-size: 18px;
+          color: #242729;
+          display: inline-block;
+          padding-top: 10px; }
+        .App .Main.Stack .dummy-stack .dummy-menu ul {
+          float: right; }
+          .App .Main.Stack .dummy-stack .dummy-menu ul li {
+            float: left;
+            padding: 10px;
+            font-size: 12px; }
+            .App .Main.Stack .dummy-stack .dummy-menu ul li:first-of-type {
+              border-top: 2px solid #F48024;
+              border-bottom: 1px solid #fff;
+              border-right: 1px solid #e4e6e8;
+              border-left: 1px solid #e4e6e8;
+              padding-bottom: 16px; }
+            .App .Main.Stack .dummy-stack .dummy-menu ul li.border {
+              border: 1px solid #e4e6e8;
+              margin: 7px;
+              padding: 3px; }
+      .App .Main.Stack .dummy-stack .dummy-sidebar {
+        width: 30%;
+        position: fixed;
+        right: 15px; }
+        .App .Main.Stack .dummy-stack .dummy-sidebar .number-button {
+          color: #242729;
+          overflow: hidden;
+          margin-bottom: 20px; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .number-button .number {
+            float: left; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .number-button div {
+            font-size: 26px; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .number-button p {
+            font-size: 13px; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .number-button .blue-button {
+            padding: 10px 30px;
+            background-color: #1997fc;
+            color: #fff;
+            font-size: 13px;
+            float: right; }
+        .App .Main.Stack .dummy-stack .dummy-sidebar .pale-table {
+          background-color: #fff8dd;
+          border: 1px solid #e0dcbf;
+          padding: 15px 15px 10px;
+          margin-top: 30px; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .pale-table div > p {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #9C988B;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0dcbf; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .pale-table div > span {
+            font-size: 13px; }
+            .App .Main.Stack .dummy-stack .dummy-sidebar .pale-table div > span.number {
+              float: left;
+              width: 30px;
+              color: #848d95;
+              padding-bottom: 20px; }
+            .App .Main.Stack .dummy-stack .dummy-sidebar .pale-table div > span.text {
+              color: #07C; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .pale-table .posts {
+            margin: 18px 0; }
+          .App .Main.Stack .dummy-stack .dummy-sidebar .pale-table .secondpart {
+            margin-top: 20px; }
+    .App .Main.Stack .single-article {
+      padding: 12px 0 10px 5px;
+      border-bottom: 1px solid #e4e6e8;
+      width: 68%;
+      overflow: hidden; }
+      .App .Main.Stack .single-article .title, .App .Main.Stack .single-article .title a {
+        color: #005999;
+        font-size: 16px;
+        margin-bottom: 8px;
+        text-decoration: none; }
+      .App .Main.Stack .single-article .main-article p {
+        color: #3b4045;
+        font-size: 13px; }
+      .App .Main.Stack .single-article .real-title {
+        font-weight: bold;
+        padding-bottom: 5px; }
+      .App .Main.Stack .single-article .additional {
+        float: right;
+        width: 25%;
+        font-size: 12px;
+        margin-top: 15px; }
+        .App .Main.Stack .single-article .additional img {
+          width: 50%;
+          float: left;
+          padding-right: 5px; }
+        .App .Main.Stack .single-article .additional span {
+          display: block;
+          margin-top: 10px; }
+      .App .Main.Stack .single-article .date {
+        display: none; }
