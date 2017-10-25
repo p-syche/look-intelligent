@@ -1,13 +1,76 @@
 .header-choice {
 	background: #fafafb;
+	padding: 0;
+	height: 57px;
+	font-family: 'Arial', sans-serif;
+	font-size: 14px;
+	border-top: 3px solid #F48024;
+
 	.title {
 		padding: 0;
+		float: left;
+		font-family: 'Arial', sans-serif;
+		font-weight: normal;
+	    width: 80px;
+	    text-align: center;
+	    font-size: 14px;
+	    letter-spacing: 1px;
+	    margin: 0 16px;
+	    border-bottom: 2px solid #F48024;
+	    padding: 14px 4px;
+    	a {
+    		text-decoration: none;
+    	}
 	}
-	border-top: 3px solid #F48024;
 	.logo {
-		background-image: url('https://cdn.sstatic.net/Sites/stackoverflow/img/sprites.svg');
+		background-image: url('https://p-syche.github.io/look-intelligent/static/SOsprites.svg');
 		width: 35px;
 		height: 45px;
 		display: inline-block;
+		float: left;
+		margin-left: 15px;
+	}
+	.choosing {
+		display: inline-block;
+		float: right;
+		min-width: 480px;
+		margin-top: 10px;
+		.cs-select {
+		    color: #6a737c;
+		    max-width: 150px;
+		    padding: 0;
+		    margin-right: 10px;
+			text-transform: capitalize;
+		}
+		.cs-placeholder {
+		    color: #6a737c;
+		    border: 1px solid #6a737c;
+		    border-radius: 2px;
+		    background: #fff;
+		    font-size: 14px;
+		    font-weight: normal;
+		    i {
+		    	color: #6a737c;
+		    }
+		}
+		.cs-options {
+			border: 1px solid #6a737c;
+			border-top: 0;
+			ul li {
+				padding: 0;
+				span {
+				    text-transform: capitalize;
+				    font-weight: normal;
+				    font-family: 'Arial', sans-serif;
+				    color: #6a737c;
+				    font-size: 14px;
+				    letter-spacing: 0;
+				    padding: 10px 7px;
+				    &::before {
+						height: 1px;
+				    }
+				}
+			}
+		}
 	}
 }

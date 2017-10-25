@@ -2736,25 +2736,76 @@ p {
     opacity: 1;
     transition: opacity 0.3s;
     border-bottom: 2px solid red; }
-  .App .Main.Pretty {
-    background: #fff; }
-    .App .Main.Pretty h2 {
-      font-family: 'Times New Roman', serif;
-      color: #7b7b7b;
-      font-weight: bold;
-      float: left; }
-    .App .Main.Pretty .single-article {
-      background: lightblue;
-      float: left; }
+  .App .Main.Pretty h2 {
+    font-family: 'Times New Roman', serif;
+    color: #7b7b7b;
+    font-weight: bold;
+    float: left; }
+  .App .Main.Pretty .single-article {
+    background: lightblue;
+    float: left; }
   .App .Main.Stack {
-    background: grey; }
+    text-align: left; }
     .App .Main.Stack .header-choice {
       background: #fafafb;
+      padding: 0;
+      height: 57px;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
       border-top: 3px solid #F48024; }
       .App .Main.Stack .header-choice .title {
-        padding: 0; }
+        padding: 0;
+        float: left;
+        font-family: 'Arial', sans-serif;
+        font-weight: normal;
+        width: 80px;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0 16px;
+        border-bottom: 2px solid #F48024;
+        padding: 14px 4px; }
+        .App .Main.Stack .header-choice .title a {
+          text-decoration: none; }
       .App .Main.Stack .header-choice .logo {
-        background-image: url("https://cdn.sstatic.net/Sites/stackoverflow/img/sprites.svg");
+        background-image: url("https://p-syche.github.io/look-intelligent/static/SOsprites.svg");
         width: 35px;
         height: 45px;
-        display: inline-block; }
+        display: inline-block;
+        float: left;
+        margin-left: 15px; }
+      .App .Main.Stack .header-choice .choosing {
+        display: inline-block;
+        float: right;
+        min-width: 480px;
+        margin-top: 10px; }
+        .App .Main.Stack .header-choice .choosing .cs-select {
+          color: #6a737c;
+          max-width: 150px;
+          padding: 0;
+          margin-right: 10px;
+          text-transform: capitalize; }
+        .App .Main.Stack .header-choice .choosing .cs-placeholder {
+          color: #6a737c;
+          border: 1px solid #6a737c;
+          border-radius: 2px;
+          background: #fff;
+          font-size: 14px;
+          font-weight: normal; }
+          .App .Main.Stack .header-choice .choosing .cs-placeholder i {
+            color: #6a737c; }
+        .App .Main.Stack .header-choice .choosing .cs-options {
+          border: 1px solid #6a737c;
+          border-top: 0; }
+          .App .Main.Stack .header-choice .choosing .cs-options ul li {
+            padding: 0; }
+            .App .Main.Stack .header-choice .choosing .cs-options ul li span {
+              text-transform: capitalize;
+              font-weight: normal;
+              font-family: 'Arial', sans-serif;
+              color: #6a737c;
+              font-size: 14px;
+              letter-spacing: 0;
+              padding: 10px 7px; }
+              .App .Main.Stack .header-choice .choosing .cs-options ul li span::before {
+                height: 1px; }

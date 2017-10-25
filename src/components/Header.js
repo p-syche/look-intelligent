@@ -45,26 +45,29 @@ class Header extends Component {
 		
 	    return (
 			<div className="header-choice">
+				<span className="logo"></span>
 				<h2 className="title">
-					<span className="logo"></span>
 					<Link to="/" onClick={this.cleanLocalStorage}>Look Intelligent</Link>
 				</h2>
-				<span>Reading </span>
-				<CustomSelect
-					key="source"
-					homeListKey="chosenSource"
-					tagline={this.props.myState.chosenSource}
-					mySources={mySources}
-					homeChoice={this.homeChoice}
-				/>
-				<span> looking like </span>
-				<CustomSelect 
-					key="appearance"
-					homeListKey="chosenAppearance"
-					tagline={this.props.myState.chosenAppearance}
-					mySources={myAppearances}
-					homeChoice={this.homeChoice}
-				/>
+				<div className="choosing">
+					<span>Reading </span>
+					<CustomSelect
+						key="source"
+						homeListKey="chosenSource"
+						tagline={this.props.myState.chosenSource}
+						mySources={mySources}
+						homeChoice={this.homeChoice}
+					/>
+					<span> looking like </span>
+					<CustomSelect 
+						key="appearance"
+						homeListKey="chosenAppearance"
+						tagline={this.props.myState.chosenAppearance}
+						mySources={myAppearances}
+						homeChoice={this.homeChoice}
+					/>
+				</div>
+				
 			</div>
 	    );
   }

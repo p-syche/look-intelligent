@@ -59,13 +59,12 @@
 
 	//pretty read
 	.Main.Pretty {
-		background: #fff;
 		@import 'header-pretty';
 		@import 'single-article-pretty';
 	}
 	//looking like Stack Overflow
 	.Main.Stack {
-		background: grey;
+		text-align: left;
 		@import 'header-stack';
 		@import 'single-article-stack';
 	}
