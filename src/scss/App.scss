@@ -4,12 +4,31 @@
 @import 'reset';
 @import 'simple-grid-min';
 
+@import 'font-awesome/scss/_font-awesome';
+
 .not-loading {
 	display: none;
 }
 
 //basic styles
 .App {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	h2 {
+		font-family: 'Quicksand', sans-serif;
+		padding: 15% 0 5% 0;
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+	ul {
+		display: inline-block;
+	}
+	.header-choice {
+		padding: 0 0 5% 0;
+	}
+	@import 'header';
 	.single-article img {
 		width: 25%;
 		height: auto;
@@ -22,30 +41,28 @@
 		font-weight: bold;
 		font-size: 14px;
 	}
-	//initial app state on welcome
-	&.initial {
-		width: 100%;
-		margin: 0 auto;
-		text-align: center;
-		font-family: 'Open Sans', sans-serif;
-		h2 {
-			font-family: 'Quicksand', sans-serif;
-			padding: 15% 0 5% 0;
-			font-weight: bold;
-			letter-spacing: 2px;
+
+	.home-page {
+		.error-handler {
+			color: red;
+			padding-top: 20px;
 		}
-		.header-choice {
-			padding: 0 0 5% 0;
+		.error-hidden {
+			opacity: 0;
+		}
+		.error-visible {
+			opacity: 1;
 		}
 	}
+
 	//pretty read
-	&.pretty {
+	.Main.Pretty {
 		background: #fff;
 		@import 'header-pretty';
 		@import 'single-article-pretty';
 	}
 	//looking like Stack Overflow
-	&.stack {
+	.Main.Stack {
 		background: grey;
 		@import 'header-stack';
 		@import 'single-article-stack';

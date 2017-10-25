@@ -15,7 +15,6 @@ class Header extends Component {
 	}
 
 	cleanLocalStorage() {
-		console.log('why?')
 		localStorage.clear();
 		this.setState({
 			chosen: {

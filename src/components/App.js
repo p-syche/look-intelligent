@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import axios from 'axios';
 import base from '../base';
@@ -20,45 +20,48 @@ class App extends Component {
 				reddit: 'reddit-r-all'
 			},
 			appearance: {
-				pretty: 'Pretty Smart', 
-				stack: 'Stack Overflow'
+				stack: 'Stack Overflow',
+				pretty: 'Pretty Smart'
 			},
-			chosen: {
-				source: 'home',
-				appearance: 'initial'
-			},
+			chosenSource: 'home',
+			chosenAppearance: 'initial',
 			loading: false,
 			articles: {}
 		}
 
 		this.applyChoice = this.applyChoice.bind(this);
+		this.applyHomeChoice = this.applyHomeChoice.bind(this);
 	}
 
 	componentWillMount() {
-		const localStorageRef = localStorage.getItem(`chosenStuff`);
+		// const localStorageRef = localStorage.getItem(`chosenStuff`);
 
-		if(localStorageRef) {
-			this.setState({
-				chosen: JSON.parse(localStorageRef),
-				articles: JSON.parse(localStorage.getItem(`chosenArticles`))
-			});
-		}
+		// if(localStorageRef) {
+		// 	this.setState({
+		// 		chosen: JSON.parse(localStorageRef),
+		// 		articles: JSON.parse(localStorage.getItem(`chosenArticles`))
+		// 	});
+		// }
+
 	}
 
 	componentWillUpdate(nextProps, nextState) {
-		localStorage.setItem(`chosenStuff`, JSON.stringify(nextState.chosen));
-		localStorage.setItem(`chosenArticles`, JSON.stringify(nextState.articles));
+		// localStorage.setItem(`chosenStuff`, JSON.stringify(nextState.chosen));
+		// localStorage.setItem(`chosenArticles`, JSON.stringify(nextState.articles));
 	}
 
 	applyChoice(theChoice) {
 
 		this.setState({
-			chosen: theChoice,
+			chosen: {
+				source: theChoice,
+				appearance: 'initial'
+			},
 			loading: true,
 			articles: {}
 		});
 
-		const url = base.apiURLstart + theChoice.source + base.apiURLend;
+		const url = base.apiURLstart + theChoice + base.apiURLend;
 
 		axios.get(url)
 	    	.then(res => {
@@ -73,24 +76,43 @@ class App extends Component {
 
 	}
 
-	render() {
+	applyHomeChoice(thisAndThat) {
 
+		if(thisAndThat.type === 'chosenSource') {
+			this.setState({
+				chosenSource: thisAndThat.item
+			});
+		} else {
+			this.setState({
+				chosenAppearance: thisAndThat.item
+			});
+		}
+	}
+
+	render() {
 		return (
-			<div className={"App " + this.state.chosen.appearance} >
-				<Switch>
-				    <Route exact path='/' render={()=><Home 
-				    	myState={this.state}
-						applyChoice={this.applyChoice}
-				    />} />
-				    <Route path='/really-smart' render={()=><Main 
-				    	myState={this.state}
-						applyChoice={this.applyChoice}
-						chosen={this.state.chosen}
-						loading={this.loading}
-						articles={this.state.articles}
-				    />} />
-				</Switch>
-			</div>
+			<Router>
+				<div className="App initial" >
+					<Switch>
+					    <Route exact path='/' render={()=><Home 
+					    	myState={this.state}
+							applyHomeChoice={this.applyHomeChoice}
+
+					    />} />
+					    <Route path='/really-smart' render={()=><Main 
+					    	myState={this.state}
+							applyChoice={this.applyChoice}
+							loading={this.loading}
+							articles={this.state.articles}
+					    />} />
+					    <Route render={()=><Home 
+					    	myState={this.state}
+							applyChoice={this.applyChoice}
+					    />} />
+					</Switch>
+				</div>
+			</Router>
+			
 		);
 	}
 }
