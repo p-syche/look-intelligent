@@ -2728,12 +2728,14 @@ p {
     font-weight: bold;
     font-size: 14px; }
   .App .home-page .error-handler {
-    color: red;
     padding-top: 20px; }
   .App .home-page .error-hidden {
-    opacity: 0; }
+    opacity: 0;
+    transition: opacity 0.3s; }
   .App .home-page .error-visible {
-    opacity: 1; }
+    opacity: 1;
+    transition: opacity 0.3s;
+    border-bottom: 2px solid red; }
   .App .Main.Pretty {
     background: #fff; }
     .App .Main.Pretty h2 {

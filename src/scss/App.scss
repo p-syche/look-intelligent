@@ -44,14 +44,19 @@
 
 	.home-page {
 		.error-handler {
-			color: red;
 			padding-top: 20px;
+
 		}
 		.error-hidden {
 			opacity: 0;
+			transition: opacity 0.3s;
+
 		}
 		.error-visible {
 			opacity: 1;
+			transition: opacity 0.3s;
+			border-bottom: 2px solid red;
+			
 		}
 	}
 

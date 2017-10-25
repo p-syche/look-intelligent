@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import CustomSelect from './CustomSelect';
 
 class Home extends Component {
@@ -61,6 +62,7 @@ class Home extends Component {
 				<div className="error-handler">
 					<span className={this.state.error ? 'error-visible' : 'error-hidden' }>Please choose a source and appearance</span>
 				</div>
+					
 			</div>
 		)
 	}
