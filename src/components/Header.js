@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import CustomSelect from './CustomSelect';
+
 class Header extends Component {
+	constructor() {
+		super();
+
+		this.homeChoice = this.homeChoice.bind(this);
+	}
 
 	choiceMade(event) {
 		event.preventDefault();
@@ -24,6 +31,14 @@ class Header extends Component {
 		});
 	}
 
+	homeChoice(item) {
+		this.props.applyChoice(item);
+
+		if(item.type === 'chosenSource') {
+			this.props.loadArticles(item.item);
+		}
+	}
+
 	render() {
 		const mySources = this.props.myState.source;
 		const myAppearances = this.props.myState.appearance;
@@ -34,31 +49,21 @@ class Header extends Component {
 					<Link to="/" onClick={this.cleanLocalStorage}>Look Intelligent</Link>
 				</h2>
 				<span>Reading </span>
-				<select ref={(input) => this.chooseSource = input} className="sources" defaultValue={this.props.myState.chosen.source} onChange={(e) => this.choiceMade(e)}>
-					<option value="home" key="home" disabled>Please choose</option>
-					{
-					Object
-						.keys(mySources)
-						.map((key) =>
-							<option value={mySources[key]} key={key} index={key}>
-								{key}
-							</option> 
-						)
-					}
-					
-				</select>
+				<CustomSelect
+					key="source"
+					homeListKey="chosenSource"
+					tagline={this.props.myState.chosenSource}
+					mySources={mySources}
+					homeChoice={this.homeChoice}
+				/>
 				<span> looking like </span>
-				<select ref={(input) => this.chooseAppearance = input} className="sources" defaultValue={this.props.myState.chosen.appearance} onChange={(e) => this.choiceMade(e)}>
-					{
-					Object
-						.keys(myAppearances)
-						.map((key) =>
-							<option value={key} key={key} index={key}>
-								{myAppearances[key]}
-							</option> 
-						)
-					}
-				</select>
+				<CustomSelect 
+					key="appearance"
+					homeListKey="chosenAppearance"
+					tagline={this.props.myState.chosenAppearance}
+					mySources={myAppearances}
+					homeChoice={this.homeChoice}
+				/>
 			</div>
 	    );
   }

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-import axios from 'axios';
-import base from '../base';
 import Home from './Home';
 import Main from './Main';
 
@@ -24,13 +22,10 @@ class App extends Component {
 				pretty: 'Pretty Smart'
 			},
 			chosenSource: 'something fun',
-			chosenAppearance: 'something smart',
-			loading: false,
-			articles: {}
+			chosenAppearance: 'something smart'
 		}
 
 		this.applyChoice = this.applyChoice.bind(this);
-		this.applyHomeChoice = this.applyHomeChoice.bind(this);
 	}
 
 	componentWillMount() {
@@ -53,33 +48,8 @@ class App extends Component {
 		// localStorage.setItem(`chosenArticles`, JSON.stringify(nextState.articles));
 	}
 
-	applyChoice(theChoice) {
 
-		this.setState({
-			chosen: {
-				source: theChoice,
-				appearance: 'initial'
-			},
-			loading: true,
-			articles: {}
-		});
-
-		const url = base.apiURLstart + theChoice + base.apiURLend;
-
-		axios.get(url)
-	    	.then(res => {
-		        this.setState({ 
-		        	loading: false,
-		        	articles: res.data.articles
-		        });
-
-			}).catch(error => {
-				console.log(error);
-		});
-
-	}
-
-	applyHomeChoice(thisAndThat) {
+	applyChoice(thisAndThat) {
 
 		if(thisAndThat.type === 'chosenSource') {
 			this.setState({
@@ -99,7 +69,7 @@ class App extends Component {
 					<Switch>
 					    <Route exact path='/' render={()=><Home 
 					    	myState={this.state}
-							applyHomeChoice={this.applyHomeChoice}
+							applyChoice={this.applyChoice}
 
 					    />} />
 					    <Route path='/really-smart' render={()=><Main 

@@ -19,7 +19,7 @@ class ListOfArticles extends React.Component {
     return (
       <div className="content container" >
         <div className={loadingSource ? 'loading-now' : 'not-loading'} >
-          LOADING!
+          LOADING! {this.props.chosenSource}
         </div>
         <div className="row">
               {

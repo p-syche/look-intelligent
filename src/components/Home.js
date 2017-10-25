@@ -15,7 +15,7 @@ class Home extends Component {
 	}
 
 	homeChoice(item) {
-		this.props.applyHomeChoice(item);
+		this.props.applyChoice(item);
 		this.setState({
 			error: false
 		});
