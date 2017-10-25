@@ -23,8 +23,8 @@ class App extends Component {
 				stack: 'Stack Overflow',
 				pretty: 'Pretty Smart'
 			},
-			chosenSource: 'home',
-			chosenAppearance: 'initial',
+			chosenSource: 'something fun',
+			chosenAppearance: 'something smart',
 			loading: false,
 			articles: {}
 		}
@@ -34,19 +34,22 @@ class App extends Component {
 	}
 
 	componentWillMount() {
-		// const localStorageRef = localStorage.getItem(`chosenStuff`);
+		const lStorageRef = localStorage.getItem(`sourceChosen`);
+		const lStorageAppearance = localStorage.getItem(`appearanceChosen`);
 
-		// if(localStorageRef) {
-		// 	this.setState({
-		// 		chosen: JSON.parse(localStorageRef),
-		// 		articles: JSON.parse(localStorage.getItem(`chosenArticles`))
-		// 	});
-		// }
+		if(lStorageRef) {
+			this.setState({
+				chosenSource: JSON.parse(lStorageRef),
+				chosenAppearance: JSON.parse(lStorageAppearance),
+				// articles: JSON.parse(localStorage.getItem(`chosenArticles`))
+			});
+		}
 
 	}
 
 	componentWillUpdate(nextProps, nextState) {
-		// localStorage.setItem(`chosenStuff`, JSON.stringify(nextState.chosen));
+		localStorage.setItem(`sourceChosen`, JSON.stringify(nextState.chosenSource));
+		localStorage.setItem(`appearanceChosen`, JSON.stringify(nextState.chosenAppearance));
 		// localStorage.setItem(`chosenArticles`, JSON.stringify(nextState.articles));
 	}
 

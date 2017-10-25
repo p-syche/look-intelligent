@@ -22,8 +22,8 @@ class Home extends Component {
 	}
 
 	linkClicked(e) {
-		if(this.props.myState.chosenSource === 'home' ||
-			this.props.myState.chosenAppearance === 'initial') {
+		if(this.props.myState.chosenSource === 'something fun' ||
+			this.props.myState.chosenAppearance === 'something smart') {
 			e.preventDefault();
 			this.setState({
 				error: true
@@ -43,7 +43,7 @@ class Home extends Component {
 				<CustomSelect 
 					key="source"
 					homeListKey="chosenSource"
-					tagline="something fun"
+					tagline={this.props.myState.chosenSource}
 					mySources={mySources}
 					homeChoice={this.homeChoice}
 				/>
@@ -53,7 +53,7 @@ class Home extends Component {
 				<CustomSelect 
 					key="appearance"
 					homeListKey="chosenAppearance"
-					tagline="something smart"
+					tagline={this.props.myState.chosenAppearance}
 					mySources={myAppearances}
 					homeChoice={this.homeChoice}
 				/>
