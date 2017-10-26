@@ -69,12 +69,12 @@ class App extends Component {
 			<Router>
 				<div className="App initial" >
 					<Switch>
-					    <Route exact path='/' render={()=><Home 
+					    <Route exact path='/look-intelligent' render={()=><Home 
 					    	myState={this.state}
 							applyChoice={this.applyChoice}
 
 					    />} />
-					    <Route path='/really-smart' render={()=><Main 
+					    <Route path='/look-intelligent/really-smart' render={()=><Main 
 					    	myState={this.state}
 							applyChoice={this.applyChoice}
 							loading={this.loading}

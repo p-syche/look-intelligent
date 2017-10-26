@@ -35,7 +35,7 @@ class Header extends Component {
 			<div className="header-choice">
 				<span className="logo"></span>
 				<h2 className="title">
-					<Link to="/" onClick={this.cleanLocalStorage}>Look Intelligent</Link>
+					<Link to="/look-intelligent" onClick={this.cleanLocalStorage}>Look Intelligent</Link>
 				</h2>
 				<div className="choosing">
 					<span>Reading </span>

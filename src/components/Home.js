@@ -58,7 +58,7 @@ class Home extends Component {
 					homeChoice={this.homeChoice}
 				/>
 				<div className="get-smart-link">
-					<Link to="/really-smart" onClick={(e) => this.linkClicked(e)}>Get smart</Link>
+					<Link to="/look-intelligent/really-smart" onClick={(e) => this.linkClicked(e)}>Get smart</Link>
 				</div>
 				
 
