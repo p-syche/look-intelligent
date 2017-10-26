@@ -29,6 +29,7 @@ class Main extends Component {
 			articles: {}
 		});
 
+
 		const url = base.apiURLstart + item + base.apiURLend;
 
 		axios.get(url)

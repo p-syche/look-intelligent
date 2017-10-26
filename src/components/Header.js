@@ -10,17 +10,6 @@ class Header extends Component {
 		this.homeChoice = this.homeChoice.bind(this);
 	}
 
-	choiceMade(event) {
-		event.preventDefault();
-
-		const theChoice = {
-			source: this.chooseSource.value,
-			appearance: this.chooseAppearance.value
-		}
-
-		this.props.applyChoice(theChoice);
-	}
-
 	cleanLocalStorage() {
 		localStorage.clear();
 		this.setState({
@@ -33,11 +22,9 @@ class Header extends Component {
 		this.props.applyChoice(item);
 
 		if(item.type === 'chosenSource') {
-			this.props.loadArticles(item.item);
+			this.props.loadArticles(item.url);
 		}
 
-		//ELSE: write URL change here! or component change? need dummy stuff :)
-		
 	}
 
 	render() {

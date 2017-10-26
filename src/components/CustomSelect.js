@@ -23,14 +23,15 @@ class CustomSelect extends Component {
 		
 	}
 
-	handleClick(e, item) {
+	handleClick(e, item, niceItem) {
 		this.setState({
-			tagline: item
+			tagline: niceItem
 		});
 
 		const choiceMade = {
-			item: item,
-			type: this.props.homeListKey
+			item: niceItem,
+			type: this.props.homeListKey,
+			url: item
 		}
 
 		this.props.homeChoice(choiceMade);
@@ -50,9 +51,9 @@ class CustomSelect extends Component {
 						Object
 							.keys(mySources)
 							.map((key) =>
-								<li value={mySources[key]} key={key} index={key} onClick={(e) => this.handleClick(e, mySources[key])}>
+								<li value={mySources[key][1]} key={key} index={key} onClick={(e) => this.handleClick(e, mySources[key][1], mySources[key][0])}>
 									<span>
-										{mySources[key]}
+										{mySources[key][0]}
 									</span>
 								</li> 
 							)

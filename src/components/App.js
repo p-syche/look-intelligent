@@ -13,13 +13,18 @@ class App extends Component {
 
 		this.state = {
 			source: {
-				buzzfeed: 'buzzfeed',
-				mashable: 'mashable',
-				reddit: 'reddit-r-all'
+				buzzfeed: ['buzzfeed','buzzfeed'],
+				mashable: ['mashable', 'mashable'],
+				reddit: ['Reddit', 'reddit-r-all'],
+				dailymail: ['Daily Mail', 'daily-mail'],
+				ladbible: ['The Lad Bible', 'the-lad-bible'],
+				huffpost: ['The Huffington Post', 'the-huffington-post'],
+				verge: ['The Verge', 'the-verge']
+				
 			},
 			appearance: {
-				stack: 'Stack Overflow',
-				pretty: 'Pretty Smart'
+				stack: ['Stack Overflow', 'Stack Overflow'],
+				pretty: ['Pretty Smart', 'Pretty Smart']
 			},
 			chosenSource: 'something fun',
 			chosenAppearance: 'something smart'
@@ -48,10 +53,9 @@ class App extends Component {
 
 
 	applyChoice(thisAndThat) {
-
 		if(thisAndThat.type === 'chosenSource') {
 			this.setState({
-				chosenSource: thisAndThat.item
+				chosenSource: thisAndThat.url
 			});
 		} else {
 			this.setState({
