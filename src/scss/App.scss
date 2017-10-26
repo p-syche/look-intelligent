@@ -3,6 +3,7 @@
 
 @import 'reset';
 @import 'font-awesome/scss/_font-awesome';
+@import 'header';
 
 .not-loading {
 	display: none;
@@ -27,7 +28,6 @@
 	.header-choice {
 		padding: 0 0 5% 0;
 	}
-	@import 'header';
 	.single-article img {
 		width: 25%;
 		height: auto;

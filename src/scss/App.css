@@ -5,6 +5,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -2367,6 +2368,217 @@ table {
   overflow: visible;
   clip: auto; }
 
+/* Default custom select styles */
+div.cs-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: left;
+  background: #fff;
+  z-index: 100;
+  width: 100%;
+  max-width: 500px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-right: 10px; }
+
+div.cs-select:focus {
+  outline: none;
+  /* For better accessibility add a style for this in your skin */ }
+
+.cs-select select {
+  display: none; }
+
+.cs-select span {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/* Placeholder and selected option */
+.cs-select > span {
+  padding-right: 3em; }
+
+.cs-select > span i,
+.cs-select .cs-selected span i {
+  speak: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.cs-select > span i {
+  right: 1em; }
+
+.cs-select .cs-selected span i {
+  margin-left: 1em; }
+
+.cs-select.cs-active > span i {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg); }
+
+div.cs-active {
+  z-index: 200; }
+
+/* Options */
+.cs-select .cs-options {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  visibility: hidden; }
+
+.cs-select.cs-active .cs-options {
+  visibility: visible; }
+
+.cs-select ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+.cs-select ul span {
+  padding: 1em; }
+
+.cs-select ul li.cs-focus span {
+  background-color: #ddd; }
+
+/* Optgroup and optgroup label */
+.cs-select li.cs-optgroup ul {
+  padding-left: 1em; }
+
+.cs-select li.cs-optgroup > span {
+  cursor: default; }
+
+div.cs-skin-underline {
+  background: transparent;
+  font-size: 1.2em;
+  max-width: 250px; }
+
+.cs-skin-underline > span {
+  padding: 0.5em 3em 0.5em 0.5em;
+  border-bottom: 3px solid #000;
+  border-color: inherit;
+  font-weight: bold; }
+
+.cs-skin-underline > span > i {
+  right: 0.25em;
+  -webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
+  transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s; }
+
+.cs-skin-underline.cs-active > span > i {
+  -webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 270deg);
+  transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 270deg); }
+
+.cs-skin-underline .cs-options {
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0.4s, visibility 0s 0.7s;
+  transition: opacity 0.3s 0.4s, visibility 0s 0.7s; }
+
+.cs-skin-underline.cs-active .cs-options {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+.cs-skin-underline ul span {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 66%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1.2em 0.8em;
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s; }
+
+.cs-select ul span::after {
+  content: '';
+  opacity: 0; }
+
+.cs-select .cs-selected span i {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s 0.7s;
+  transition: opacity 0.3s 0.7s; }
+
+.cs-skin-underline ul span::before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: lightgrey;
+  -webkit-transform: translate3d(200%, 0, 0);
+  transform: translate3d(200%, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+.cs-skin-underline ul li {
+  padding: 8px 0px; }
+
+.cs-skin-underline ul span a {
+  text-decoration: none; }
+
+.cs-skin-underline.cs-active ul span,
+.cs-skin-underline.cs-active ul span::before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.cs-skin-underline li:nth-child(5) span,
+.cs-skin-underline li:nth-child(5) span::before,
+.cs-skin-underline.cs-active li:first-child span,
+.cs-skin-underline.cs-active li:first-child span::before {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+
+.cs-skin-underline li:nth-child(4) span,
+.cs-skin-underline li:nth-child(4) span::before,
+.cs-skin-underline.cs-active li:nth-child(2) span,
+.cs-skin-underline.cs-active li:nth-child(2) span::before {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s; }
+
+.cs-skin-underline li:nth-child(3) span,
+.cs-skin-underline li:nth-child(3) span::before {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.cs-skin-underline li:nth-child(2) span,
+.cs-skin-underline li:nth-child(2) span::before,
+.cs-skin-underline.cs-active li:nth-child(4) span,
+.cs-skin-underline.cs-active li:nth-child(4) span::before {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s; }
+
+.cs-skin-underline li:first-child span,
+.cs-skin-underline li:first-child span::before,
+.cs-skin-underline.cs-active li:nth-child(5) span,
+.cs-skin-underline.cs-active li:nth-child(5) span::before {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+/* more items require more delay declarations */
+.cs-skin-underline .cs-options li span:hover,
+.cs-skin-underline .cs-options li.cs-focus span,
+.cs-skin-underline li.cs-selected span {
+  color: #566473;
+  background: transparent; }
+
 .not-loading {
   display: none; }
 
@@ -2374,12 +2586,7 @@ table {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  /* Default custom select styles */
-  /* Placeholder and selected option */
-  /* Options */
-  /* Optgroup and optgroup label */
-  /* more items require more delay declarations */ }
+  font-family: 'Open Sans', sans-serif; }
   .App h2 {
     font-family: 'Quicksand', sans-serif;
     padding: 15% 0 5% 0;
@@ -2390,176 +2597,6 @@ table {
     display: inline-block; }
   .App .header-choice {
     padding: 0 0 5% 0; }
-  .App div.cs-select {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    text-align: left;
-    background: #fff;
-    z-index: 100;
-    width: 100%;
-    max-width: 500px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding-right: 10px; }
-  .App div.cs-select:focus {
-    outline: none;
-    /* For better accessibility add a style for this in your skin */ }
-  .App .cs-select select {
-    display: none; }
-  .App .cs-select span {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    padding: 1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-  .App .cs-select > span {
-    padding-right: 3em; }
-  .App .cs-select > span i,
-  .App .cs-select .cs-selected span i {
-    speak: none;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
-  .App .cs-select > span i {
-    right: 1em; }
-  .App .cs-select .cs-selected span i {
-    margin-left: 1em; }
-  .App .cs-select.cs-active > span i {
-    -webkit-transform: translateY(-50%) rotate(180deg);
-    transform: translateY(-50%) rotate(180deg); }
-  .App div.cs-active {
-    z-index: 200; }
-  .App .cs-select .cs-options {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    background: #fff;
-    visibility: hidden; }
-  .App .cs-select.cs-active .cs-options {
-    visibility: visible; }
-  .App .cs-select ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%; }
-  .App .cs-select ul span {
-    padding: 1em; }
-  .App .cs-select ul li.cs-focus span {
-    background-color: #ddd; }
-  .App .cs-select li.cs-optgroup ul {
-    padding-left: 1em; }
-  .App .cs-select li.cs-optgroup > span {
-    cursor: default; }
-  .App div.cs-skin-underline {
-    background: transparent;
-    font-size: 1.2em;
-    max-width: 250px; }
-  .App .cs-skin-underline > span {
-    padding: 0.5em 3em 0.5em 0.5em;
-    border-bottom: 3px solid #000;
-    border-color: inherit;
-    font-weight: bold; }
-  .App .cs-skin-underline > span > i {
-    right: 0.25em;
-    -webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
-    transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s; }
-  .App .cs-skin-underline.cs-active > span > i {
-    -webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 270deg);
-    transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 270deg); }
-  .App .cs-skin-underline .cs-options {
-    background: #fff;
-    opacity: 0;
-    -webkit-transition: opacity 0.3s 0.4s, visibility 0s 0.7s;
-    transition: opacity 0.3s 0.4s, visibility 0s 0.7s; }
-  .App .cs-skin-underline.cs-active .cs-options {
-    opacity: 1;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
-  .App .cs-skin-underline ul span {
-    position: relative;
-    text-transform: uppercase;
-    font-size: 66%;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 1.2em 0.8em;
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s; }
-  .App .cs-select ul span::after {
-    content: '';
-    opacity: 0; }
-  .App .cs-select .cs-selected span i {
-    opacity: 1;
-    -webkit-transition: opacity 0.3s 0.7s;
-    transition: opacity 0.3s 0.7s; }
-  .App .cs-skin-underline ul span::before {
-    content: '';
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: lightgrey;
-    -webkit-transform: translate3d(200%, 0, 0);
-    transform: translate3d(200%, 0, 0);
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s; }
-  .App .cs-skin-underline ul li {
-    padding: 8px 0px; }
-  .App .cs-skin-underline ul span a {
-    text-decoration: none; }
-  .App .cs-skin-underline.cs-active ul span,
-  .App .cs-skin-underline.cs-active ul span::before {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  .App .cs-skin-underline li:nth-child(5) span,
-  .App .cs-skin-underline li:nth-child(5) span::before,
-  .App .cs-skin-underline.cs-active li:first-child span,
-  .App .cs-skin-underline.cs-active li:first-child span::before {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s; }
-  .App .cs-skin-underline li:nth-child(4) span,
-  .App .cs-skin-underline li:nth-child(4) span::before,
-  .App .cs-skin-underline.cs-active li:nth-child(2) span,
-  .App .cs-skin-underline.cs-active li:nth-child(2) span::before {
-    -webkit-transition-delay: 0.05s;
-    transition-delay: 0.05s; }
-  .App .cs-skin-underline li:nth-child(3) span,
-  .App .cs-skin-underline li:nth-child(3) span::before {
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s; }
-  .App .cs-skin-underline li:nth-child(2) span,
-  .App .cs-skin-underline li:nth-child(2) span::before,
-  .App .cs-skin-underline.cs-active li:nth-child(4) span,
-  .App .cs-skin-underline.cs-active li:nth-child(4) span::before {
-    -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s; }
-  .App .cs-skin-underline li:first-child span,
-  .App .cs-skin-underline li:first-child span::before,
-  .App .cs-skin-underline.cs-active li:nth-child(5) span,
-  .App .cs-skin-underline.cs-active li:nth-child(5) span::before {
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s; }
-  .App .cs-skin-underline .cs-options li span:hover,
-  .App .cs-skin-underline .cs-options li.cs-focus span,
-  .App .cs-skin-underline li.cs-selected span {
-    color: #566473;
-    background: transparent; }
   .App .single-article img {
     width: 25%;
     height: auto; }
@@ -2588,134 +2625,267 @@ table {
     opacity: 1;
     transition: opacity 0.3s;
     border-bottom: 2px solid red; }
-  .App .Main.Pretty h2 {
-    font-family: 'Times New Roman', serif;
-    color: #7b7b7b;
-    font-weight: bold;
-    float: left; }
-  .App .Main.Pretty body, .App .Main.Pretty html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-    font-size: 100%; }
-  .App .Main.Pretty .center, .App .Main.Pretty .container {
-    margin-left: auto;
-    margin-right: auto; }
-  .App .Main.Pretty * {
-    font-family: Lato,Helvetica,sans-serif;
-    color: #333447;
-    line-height: 1.5; }
-  .App .Main.Pretty h1 {
-    font-size: 2.5rem; }
-  .App .Main.Pretty h2 {
-    font-size: 2rem; }
-  .App .Main.Pretty h3 {
-    font-size: 1.375rem; }
-  .App .Main.Pretty h4 {
-    font-size: 1.125rem; }
-  .App .Main.Pretty h5 {
-    font-size: 1rem; }
-  .App .Main.Pretty h6 {
-    font-size: .875rem; }
-  .App .Main.Pretty p {
-    font-size: 1.125rem;
-    font-weight: 200;
-    line-height: 1.8; }
-  .App .Main.Pretty .font-light {
-    font-weight: 300; }
-  .App .Main.Pretty .font-regular {
-    font-weight: 400; }
-  .App .Main.Pretty .font-heavy {
-    font-weight: 700; }
-  .App .Main.Pretty .left {
-    text-align: left; }
-  .App .Main.Pretty .right {
-    text-align: right; }
-  .App .Main.Pretty .center {
-    text-align: center; }
-  .App .Main.Pretty .justify {
-    text-align: justify; }
-  .App .Main.Pretty .container {
-    width: 90%; }
-  .App .Main.Pretty .row {
-    position: relative;
-    width: 100%; }
-  .App .Main.Pretty .row [class^=col] {
-    float: left;
-    margin: .5rem 2%;
-    min-height: .125rem; }
-  .App .Main.Pretty .col-1, .App .Main.Pretty .col-10, .App .Main.Pretty .col-11, .App .Main.Pretty .col-12, .App .Main.Pretty .col-2, .App .Main.Pretty .col-3, .App .Main.Pretty .col-4, .App .Main.Pretty .col-5, .App .Main.Pretty .col-6, .App .Main.Pretty .single-article, .App .Main.Pretty .col-7, .App .Main.Pretty .col-8, .App .Main.Pretty .col-9 {
-    width: 96%; }
-  .App .Main.Pretty .col-1-sm {
-    width: 4.33%; }
-  .App .Main.Pretty .col-2-sm {
-    width: 12.66%; }
-  .App .Main.Pretty .col-3-sm {
-    width: 21%; }
-  .App .Main.Pretty .col-4-sm {
-    width: 29.33%; }
-  .App .Main.Pretty .col-5-sm {
-    width: 37.66%; }
-  .App .Main.Pretty .col-6-sm {
-    width: 46%; }
-  .App .Main.Pretty .col-7-sm {
-    width: 54.33%; }
-  .App .Main.Pretty .col-8-sm {
-    width: 62.66%; }
-  .App .Main.Pretty .col-9-sm {
-    width: 71%; }
-  .App .Main.Pretty .col-10-sm {
-    width: 79.33%; }
-  .App .Main.Pretty .col-11-sm {
-    width: 87.66%; }
-  .App .Main.Pretty .col-12-sm {
-    width: 96%; }
-  .App .Main.Pretty .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .App .Main.Pretty .hidden-sm {
-    display: none; }
-  @media only screen and (min-width: 33.75em) {
+  .App .Main.Pretty {
+    /**
+*** SIMPLE GRID
+*** (C) ZACH COLE 2016
+**/
+    /* UNIVERSAL */
+    /* ROOT FONT STYLES */
+    /* TYPOGRAPHY */
+    /* POSITIONING */
+    /* ==== GRID SYSTEM ==== */ }
+    .App .Main.Pretty i {
+      font-family: 'FontAwesome';
+      color: #7b7b7b; }
+    .App .Main.Pretty .header-choice {
+      text-align: center;
+      background: #f5f5f5;
+      z-index: 1000;
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      top: 0;
+      left: 0;
+      font-family: 'Times New Roman', serif;
+      padding-bottom: 40px; }
+      .App .Main.Pretty .header-choice .logo {
+        display: none; }
+      .App .Main.Pretty .header-choice h2.title {
+        padding: 25px 20px 5px 20px;
+        color: #7b7b7b;
+        float: left;
+        width: 170px;
+        text-align: center;
+        white-space: pre-wrap;
+        line-height: 0.8;
+        letter-spacing: 0; }
+        .App .Main.Pretty .header-choice h2.title a {
+          display: block;
+          line-height: 0.8; }
+      .App .Main.Pretty .header-choice h2, .App .Main.Pretty .header-choice a, .App .Main.Pretty .header-choice span {
+        font-family: 'Times New Roman', serif;
+        text-decoration: none;
+        color: #7b7b7b; }
+      .App .Main.Pretty .header-choice .choosing {
+        float: right;
+        display: inline-block;
+        text-align: right;
+        width: 55%;
+        padding-top: 25px; }
+        .App .Main.Pretty .header-choice .choosing .cs-select {
+          font-size: 1em;
+          max-width: 170px; }
+    .App .Main.Pretty html,
+    .App .Main.Pretty body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      left: 0;
+      top: 0;
+      font-size: 100%; }
+    .App .Main.Pretty * {
+      font-family: 'Lato', Helvetica, sans-serif;
+      color: #333447;
+      line-height: 1.5; }
+    .App .Main.Pretty h1 {
+      font-size: 2.5rem; }
+    .App .Main.Pretty h2 {
+      font-size: 2rem; }
+    .App .Main.Pretty h3 {
+      font-size: 1.375rem; }
+    .App .Main.Pretty h4 {
+      font-size: 1.125rem; }
+    .App .Main.Pretty h5 {
+      font-size: 1rem; }
+    .App .Main.Pretty h6 {
+      font-size: 0.875rem; }
+    .App .Main.Pretty p {
+      font-size: 1.125rem;
+      font-weight: 200;
+      line-height: 1.8; }
+    .App .Main.Pretty .font-light {
+      font-weight: 300; }
+    .App .Main.Pretty .font-regular {
+      font-weight: 400; }
+    .App .Main.Pretty .font-heavy {
+      font-weight: 700; }
+    .App .Main.Pretty .left {
+      text-align: left; }
+    .App .Main.Pretty .right {
+      text-align: right; }
+    .App .Main.Pretty .center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto; }
+    .App .Main.Pretty .justify {
+      text-align: justify; }
     .App .Main.Pretty .container {
-      width: 80%; } }
-  @media only screen and (min-width: 45em) {
-    .App .Main.Pretty .col-1 {
-      width: 4.33%; }
-    .App .Main.Pretty .col-2 {
-      width: 12.66%; }
-    .App .Main.Pretty .col-3 {
-      width: 21%; }
-    .App .Main.Pretty .col-4 {
-      width: 29.33%; }
-    .App .Main.Pretty .col-5 {
-      width: 37.66%; }
-    .App .Main.Pretty .col-6, .App .Main.Pretty .single-article {
-      width: 46%; }
-    .App .Main.Pretty .col-7 {
-      width: 54.33%; }
-    .App .Main.Pretty .col-8 {
-      width: 62.66%; }
-    .App .Main.Pretty .col-9 {
-      width: 71%; }
-    .App .Main.Pretty .col-10 {
-      width: 79.33%; }
-    .App .Main.Pretty .col-11 {
-      width: 87.66%; }
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto; }
+    .App .Main.Pretty .row {
+      position: relative;
+      width: 100%; }
+    .App .Main.Pretty .row [class^="col"] {
+      float: left;
+      margin: 0.5rem 2%;
+      min-height: 0.125rem; }
+    .App .Main.Pretty .col-1,
+    .App .Main.Pretty .col-2,
+    .App .Main.Pretty .col-3,
+    .App .Main.Pretty .col-4,
+    .App .Main.Pretty .col-5,
+    .App .Main.Pretty .col-6, .App .Main.Pretty .single-article,
+    .App .Main.Pretty .col-7,
+    .App .Main.Pretty .col-8,
+    .App .Main.Pretty .col-9,
+    .App .Main.Pretty .col-10,
+    .App .Main.Pretty .col-11,
     .App .Main.Pretty .col-12 {
       width: 96%; }
+    .App .Main.Pretty .col-1-sm {
+      width: 4.33%; }
+    .App .Main.Pretty .col-2-sm {
+      width: 12.66%; }
+    .App .Main.Pretty .col-3-sm {
+      width: 21%; }
+    .App .Main.Pretty .col-4-sm {
+      width: 29.33%; }
+    .App .Main.Pretty .col-5-sm {
+      width: 37.66%; }
+    .App .Main.Pretty .col-6-sm {
+      width: 46%; }
+    .App .Main.Pretty .col-7-sm {
+      width: 54.33%; }
+    .App .Main.Pretty .col-8-sm {
+      width: 62.66%; }
+    .App .Main.Pretty .col-9-sm {
+      width: 71%; }
+    .App .Main.Pretty .col-10-sm {
+      width: 79.33%; }
+    .App .Main.Pretty .col-11-sm {
+      width: 87.66%; }
+    .App .Main.Pretty .col-12-sm {
+      width: 96%; }
+    .App .Main.Pretty .row::after {
+      content: "";
+      display: table;
+      clear: both; }
     .App .Main.Pretty .hidden-sm {
-      display: block; } }
-  @media only screen and (min-width: 60em) {
-    .App .Main.Pretty .container {
-      width: 75%;
-      max-width: 60rem; } }
-  .App .Main.Pretty .single-article {
-    background: lightblue;
-    float: left; }
+      display: none; }
+    @media only screen and (min-width: 33.75em) {
+      .App .Main.Pretty {
+        /* 540px */ }
+        .App .Main.Pretty .container {
+          width: 80%; } }
+    @media only screen and (min-width: 45em) {
+      .App .Main.Pretty {
+        /* 720px */ }
+        .App .Main.Pretty .col-1 {
+          width: 4.33%; }
+        .App .Main.Pretty .col-2 {
+          width: 12.66%; }
+        .App .Main.Pretty .col-3 {
+          width: 21%; }
+        .App .Main.Pretty .col-4 {
+          width: 29.33%; }
+        .App .Main.Pretty .col-5 {
+          width: 37.66%; }
+        .App .Main.Pretty .col-6, .App .Main.Pretty .single-article {
+          width: 46%; }
+        .App .Main.Pretty .col-7 {
+          width: 54.33%; }
+        .App .Main.Pretty .col-8 {
+          width: 62.66%; }
+        .App .Main.Pretty .col-9 {
+          width: 71%; }
+        .App .Main.Pretty .col-10 {
+          width: 79.33%; }
+        .App .Main.Pretty .col-11 {
+          width: 87.66%; }
+        .App .Main.Pretty .col-12 {
+          width: 96%; }
+        .App .Main.Pretty .hidden-sm {
+          display: block; } }
+    @media only screen and (min-width: 60em) {
+      .App .Main.Pretty {
+        /* 960px */ }
+        .App .Main.Pretty .container {
+          width: 75%;
+          max-width: 60rem; } }
+    .App .Main.Pretty .content {
+      margin-top: 100px; }
+    .App .Main.Pretty .dummy-pretty {
+      display: none; }
+    .App .Main.Pretty .single-article {
+      float: left;
+      margin: 15px;
+      height: 300px;
+      color: #7b7b7b;
+      font-family: 'Times New Roman', serif; }
+      .App .Main.Pretty .single-article .border-holder {
+        border: 1px solid rgba(74, 74, 74, 0.075);
+        padding: 10px;
+        height: 100%;
+        padding: 0 20px;
+        position: relative; }
+        .App .Main.Pretty .single-article .border-holder:hover {
+          border: 2px solid rgba(129, 196, 131, 0.5);
+          margin-top: -1px; }
+          .App .Main.Pretty .single-article .border-holder:hover .title, .App .Main.Pretty .single-article .border-holder:hover .title a {
+            color: #000; }
+      .App .Main.Pretty .single-article a {
+        text-decoration: none; }
+      .App .Main.Pretty .single-article .fun-text {
+        display: none; }
+      .App .Main.Pretty .single-article .title, .App .Main.Pretty .single-article .title a {
+        font-family: 'Times New Roman', serif;
+        color: #7b7b7b;
+        font-weight: bold;
+        font-size: 30px;
+        display: block;
+        line-height: 0.8; }
+      .App .Main.Pretty .single-article .title {
+        padding-top: 40px; }
+      .App .Main.Pretty .single-article .date {
+        display: none; }
+      .App .Main.Pretty .single-article .main-article {
+        position: relative;
+        margin-top: 15px; }
+        .App .Main.Pretty .single-article .main-article::before {
+          content: '';
+          position: absolute;
+          width: 33%;
+          height: 1px;
+          background: #7b7b7b;
+          left: 33%;
+          top: -1px; }
+        .App .Main.Pretty .single-article .main-article .real-title {
+          font-style: italic;
+          font-size: 15px;
+          display: inline-block;
+          line-height: 1;
+          padding-top: 15px;
+          width: 75%; }
+      .App .Main.Pretty .single-article .additional {
+        position: absolute;
+        bottom: 10px;
+        right: 20px; }
+        .App .Main.Pretty .single-article .additional a {
+          float: left;
+          margin-left: 20px; }
+        .App .Main.Pretty .single-article .additional a, .App .Main.Pretty .single-article .additional .author {
+          font-size: 12px;
+          color: #7b7b7b;
+          margin-top: 40px; }
+        .App .Main.Pretty .single-article .additional img {
+          display: inline-block;
+          border-radius: 50%;
+          margin-bottom: 30px; }
+        .App .Main.Pretty .single-article .additional .author {
+          float: right; }
   .App .Main.Stack {
     text-align: left; }
     .App .Main.Stack .header-choice {
