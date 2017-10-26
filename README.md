@@ -14,7 +14,7 @@ Some stuff coded into this little "show-off project":
 - and other cool things :)
 
 Inspirations:
-[Custom Select](https://tympanus.net/Development/SelectInspiration/index2.html)
-[Pretty grid articles](https://tympanus.net/Development/AnimatedGridLayout/)
+- [Custom Select](https://tympanus.net/Development/SelectInspiration/index2.html)
+- [Pretty grid articles](https://tympanus.net/Development/AnimatedGridLayout/)
 
 Big tip of the hat to [Wes Bos](http://wesbos.com/courses/), who thaught me ReactJS!
