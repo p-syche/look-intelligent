@@ -2582,6 +2582,13 @@ div.cs-skin-underline {
 .not-loading {
   display: none; }
 
+.github-link {
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  bottom: 30px;
+  left: 44%; }
+
 .App {
   width: 100%;
   margin: 0 auto;
@@ -2597,6 +2604,8 @@ div.cs-skin-underline {
     display: inline-block; }
   .App .header-choice {
     padding: 0 0 5% 0; }
+    .App .header-choice .stack-logo {
+      display: none; }
   .App .single-article {
     overflow: visible; }
     .App .single-article img {
@@ -2896,6 +2905,11 @@ div.cs-skin-underline {
           max-width: 20%; }
   .App .Main.Stack {
     text-align: left; }
+    .App .Main.Stack .stack-logo {
+      display: block;
+      position: fixed;
+      margin-top: -482px;
+      margin-left: 20px; }
     .App .Main.Stack .header-choice {
       background: #fafafb;
       padding: 0;
@@ -2922,7 +2936,6 @@ div.cs-skin-underline {
           text-decoration: none;
           color: #000; }
       .App .Main.Stack .header-choice .logo {
-        background-image: url("https://p-syche.github.io/look-intelligent/static/SOsprites.svg");
         width: 35px;
         height: 45px;
         display: inline-block;

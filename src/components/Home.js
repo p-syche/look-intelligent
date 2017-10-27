@@ -65,7 +65,7 @@ class Home extends Component {
 				<div className="error-handler">
 					<span className={this.state.error ? 'error-visible' : 'error-hidden' }>Please choose a source and appearance</span>
 				</div>
-					
+				<a href="https://p-syche.github.io/look-intelligent/" className="github-link">GitHub Repo link</a>
 			</div>
 		)
 	}

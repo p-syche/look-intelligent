@@ -1,3 +1,10 @@
+.stack-logo {
+	display: block;
+    position: fixed;
+    margin-top: -482px;
+    margin-left: 20px;
+}
+
 .header-choice {
 	background: #fafafb;
 	padding: 0;
@@ -26,7 +33,6 @@
     	}
 	}
 	.logo {
-		background-image: url('https://p-syche.github.io/look-intelligent/static/SOsprites.svg');
 		width: 35px;
 		height: 45px;
 		display: inline-block;

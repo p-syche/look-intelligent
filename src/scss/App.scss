@@ -9,6 +9,14 @@
 	display: none;
 }
 
+.github-link {
+	color: #000;
+	text-decoration: none;
+	position: absolute;
+	bottom: 30px;
+	left: 44%;
+}
+
 //basic styles
 .App {
 	width: 100%;
@@ -27,6 +35,9 @@
 	}
 	.header-choice {
 		padding: 0 0 5% 0;
+		.stack-logo {
+			display: none;
+		}
 	}
 	.single-article {
 		overflow: visible;
