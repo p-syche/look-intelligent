@@ -35,6 +35,8 @@
 		h3 a {
 			font-weight: normal;
 			font-family: 'Open Sans';
+			max-height: 65px;
+			overflow: hidden;
 		}
 		.fun-text {
 			display: none;

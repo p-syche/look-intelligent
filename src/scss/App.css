@@ -2597,9 +2597,15 @@ div.cs-skin-underline {
     display: inline-block; }
   .App .header-choice {
     padding: 0 0 5% 0; }
-  .App .single-article img {
-    width: 25%;
-    height: auto; }
+  .App .single-article {
+    overflow: visible; }
+    .App .single-article img {
+      width: 25%;
+      height: auto; }
+    .App .single-article .border-holder {
+      overflow: hidden; }
+      .App .single-article .border-holder h3 a {
+        background-color: #fff; }
   .App select {
     padding: 0.5em 3em 0.5em 0.5em;
     border-color: black;
@@ -2846,7 +2852,9 @@ div.cs-skin-underline {
         font-weight: bold;
         font-size: 30px;
         display: block;
-        line-height: 0.8; }
+        line-height: 0.8;
+        max-height: 98px;
+        overflow: hidden; }
       .App .Main.Pretty .single-article .title {
         padding-top: 40px; }
       .App .Main.Pretty .single-article .main-article {
@@ -2870,7 +2878,8 @@ div.cs-skin-underline {
       .App .Main.Pretty .single-article .additional {
         position: absolute;
         bottom: 10px;
-        right: 20px; }
+        right: 20px;
+        max-height: 60px; }
         .App .Main.Pretty .single-article .additional a {
           float: left;
           margin-left: 20px; }
@@ -2883,7 +2892,8 @@ div.cs-skin-underline {
           border-radius: 50%;
           margin-bottom: 30px; }
         .App .Main.Pretty .single-article .additional .author {
-          float: right; }
+          float: right;
+          max-width: 20%; }
   .App .Main.Stack {
     text-align: left; }
     .App .Main.Stack .header-choice {
@@ -3160,7 +3170,9 @@ div.cs-skin-underline {
       height: 350px; }
       .App .Main.York .single-article:nth-of-type(5n+2) h3 a, .App .Main.York .single-article:nth-of-type(5n+4) h3 a {
         font-weight: normal;
-        font-family: 'Open Sans'; }
+        font-family: 'Open Sans';
+        max-height: 65px;
+        overflow: hidden; }
       .App .Main.York .single-article:nth-of-type(5n+2) .fun-text, .App .Main.York .single-article:nth-of-type(5n+4) .fun-text {
         display: none; }
       .App .Main.York .single-article:nth-of-type(5n+2) .additional img, .App .Main.York .single-article:nth-of-type(5n+4) .additional img {
