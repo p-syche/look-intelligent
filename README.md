@@ -6,7 +6,7 @@ Dress up time-wasting websites so You look intelligent while You browse them
 
 [Demo](https://p-syche.github.io/look-intelligent/)
 
-Some stuff coded into this little "show-off project":
+Some stuff included in this demo webApp:
 - basic routing [React Router Dom](https://reacttraining.com/react-router/web/example/basic)
 - stateless components
 - conditional components
