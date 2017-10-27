@@ -61,6 +61,7 @@
 }
 
 .header-choice {
+    padding-bottom: 10px;
 	h2 {
 		padding: 80px 0 20px 0;
 		font-family: 'UnifrakturMaguntia', serif;
@@ -71,15 +72,18 @@
 		}
 	}
 	.choosing {
-		border-bottom: 2px solid #000;
+        border-top: 2px solid #000;
+		border-bottom: 1px solid #ccc;
 		font-size: 13px;
-		padding-bottom: 10px;
+		padding: 10px 0;
 		.cs-select {
 			font-size: 13px;
 			max-width: 170px;
+            li span {
+                font-size: 10px;
+            }
 			.cs-placeholder {
-				border-bottom: none;
-				background-color: rgba(0, 0, 0, 0.1);
+				border-bottom: 1px dashed #ccc;
 				i {
 					color: rgba(0,0,0,0.5);
 				}

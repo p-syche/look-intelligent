@@ -21,9 +21,6 @@ const Article = (props) => {
           <img src={singleArticle.urlToImage} alt=""/>
           <span className="author">{singleArticle.author}</span>
         </div>
-        <div className="meta">
-          <span className="date">{singleArticle.publishedAt}</span>
-        </div>
       </div>
       
     </div>
