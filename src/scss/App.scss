@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|UnifrakturMaguntia');
 
 @import 'reset';
 @import 'font-awesome/scss/_font-awesome';
@@ -77,5 +77,10 @@
 		text-align: left;
 		@import 'header-stack';
 		@import 'single-article-stack';
+	}
+	//looking like the New York Times
+	.Main.York {
+		@import 'header-york';
+		@import 'single-article-york'
 	}
 }

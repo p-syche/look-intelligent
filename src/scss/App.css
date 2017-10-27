@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|UnifrakturMaguntia");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -3065,3 +3065,74 @@ div.cs-skin-underline {
           margin-top: 10px; }
       .App .Main.Stack .single-article .date {
         display: none; }
+  .App .Main.York .dummy-york {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    color: #333;
+    font-family: 'Arial', sans-serif; }
+    .App .Main.York .dummy-york .left-side {
+      float: left;
+      width: 30%;
+      text-align: left;
+      padding-left: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase; }
+      .App .Main.York .dummy-york .left-side i {
+        padding-right: 5px; }
+      .App .Main.York .dummy-york .left-side span {
+        padding-right: 10px; }
+    .App .Main.York .dummy-york .middle {
+      width: 100%;
+      margin: 0 auto;
+      float: left;
+      border-bottom: 1px solid #e2e2e2; }
+      .App .Main.York .dummy-york .middle span {
+        padding: 8px 8px 1px 8px;
+        border: 1px solid #e2e2e2;
+        border-bottom: 1px solid #fff;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 10px;
+        font-weight: lighter;
+        text-transform: uppercase; }
+    .App .Main.York .dummy-york .right-side {
+      float: right;
+      width: 30%;
+      text-align: right;
+      padding-right: 20px;
+      margin-top: -10px; }
+      .App .Main.York .dummy-york .right-side .blue-btn {
+        background-color: #6288a5;
+        border: 1px solid #4d7b9f;
+        border-radius: 3px;
+        color: #fff;
+        height: 14px;
+        display: inline-block;
+        padding: 5px 13px 9px 13px;
+        margin-right: 10px; }
+        .App .Main.York .dummy-york .right-side .blue-btn span {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 11px; }
+  .App .Main.York .header-choice h2 {
+    padding: 80px 0 20px 0;
+    font-family: 'UnifrakturMaguntia', serif; }
+    .App .Main.York .header-choice h2 a {
+      color: #333;
+      text-decoration: none;
+      font-size: 42px; }
+  .App .Main.York .header-choice .choosing {
+    border-bottom: 2px solid #000;
+    font-size: 13px;
+    padding-bottom: 10px; }
+    .App .Main.York .header-choice .choosing .cs-select {
+      font-size: 13px;
+      max-width: 170px; }
+      .App .Main.York .header-choice .choosing .cs-select .cs-placeholder {
+        border-bottom: none;
+        background-color: rgba(0, 0, 0, 0.1); }
+        .App .Main.York .header-choice .choosing .cs-select .cs-placeholder i {
+          color: rgba(0, 0, 0, 0.5); }

@@ -24,7 +24,8 @@ class App extends Component {
 			},
 			appearance: {
 				stack: ['Stack Overflow', 'Stack Overflow'],
-				pretty: ['Pretty Smart', 'Pretty Smart']
+				pretty: ['Pretty Smart', 'Pretty Smart'],
+				newYork: ['The New York Times', 'The New York Times']
 			},
 			chosenSource: 'something fun',
 			chosenAppearance: 'something smart'

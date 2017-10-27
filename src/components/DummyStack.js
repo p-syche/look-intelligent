@@ -18,7 +18,7 @@ const DummyStack = (props) => {
 			<div className="dummy-sidebar">
 				<div className="number-button">
 					<div className="number">
-						<div>14,787993</div>
+						<div>14,787,993</div>
 						<p>questions</p>
 					</div>
 					<div className="blue-button">

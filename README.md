@@ -17,4 +17,4 @@ Inspirations:
 - [Custom Select](https://tympanus.net/Development/SelectInspiration/index2.html)
 - [Pretty grid articles](https://tympanus.net/Development/AnimatedGridLayout/)
 
-Big tip of the hat to [Wes Bos](http://wesbos.com/courses/), who thaught me ReactJS!
+Big tip of the hat to [Wes Bos](http://wesbos.com/courses/), who's course led me to fall in love with ReactJS ;)
